@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root { --accent: #a29bfe; --bg: #0d1117; }
+        body { font-family: 'Segoe UI', sans-serif; background: var(--bg); color: white; display: flex; align-items: center; justify-content: center; min-height: 100vh; margin: 0; }
+        .card { background: #151921; padding: 35px; border-radius: 30px; border: 1px solid #30363d; width: 90%; max-width: 400px; text-align: center; }
+        input { width: 100%; padding: 18px; margin: 20px 0; font-size: 1.8rem; text-align: center; border-radius: 15px; border: 2px solid #30363d; background: #0b0e14; color: white; outline: none; box-sizing: border-box; }
+        button { width: 100%; padding: 18px; background: var(--accent); color: white; border: none; border-radius: 15px; font-weight: bold; cursor: pointer; text-transform: uppercase; }
+        .clue-highlight { display: none; background: rgba(162, 155, 254, 0.05); padding: 25px; border-radius: 20px; border-left: 5px solid var(--accent); font-size: 1.2rem; line-height: 1.6; text-align: left; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div id="lock">
+            <h2 style="letter-spacing: 2px;">🔐 Station 02</h2>
+            <input type="number" id="pw" placeholder="---">
+            <button onclick="v()">Unlock Clue</button>
+        </div>
+        <div id="content" style="display:none;">
+            <div class="clue-highlight" id="reveal">
+                "Patton mein likha hai prakriti ka gyaan, Jo samjha use mila asli imtihaan. — Jahan prakriti doctor bani."
+            </div>
+            <p style="margin-top: 25px; color: #8b949e; font-size: 0.8rem;">Next Code</p>
+            <div style="font-size: 2.5rem; color: var(--accent); font-weight: bold;">148</div>
+        </div>
+    </div>
+    <script>function v(){ if(document.getElementById('pw').value == '592'){ document.getElementById('lock').style.display='none'; document.getElementById('content').style.display='block'; document.getElementById('reveal').style.display='block'; }else{ alert('Access Denied'); }}</script>
+</body>
+</html>
